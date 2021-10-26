@@ -1,0 +1,221 @@
+:root {                                     /* eta use kora hoi variable bananor jonno */
+    --bold: 700;
+    --c--text: #337;
+    --dis : block
+}
+
+
+@font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+}
+
+
+body {
+    font-family: "Bitstream Vera Serif Bold", serif;
+    color: var(--c--text);
+    font-size: 16px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+img {
+    max-width: 100%;
+    display: var(--dis);
+    width: 20rem;
+
+}
+
+.h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    font-family: cursive;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: var(--bold);
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 20px auto;  /* vertical | horizontal   shorthand property sets the margin area on all four sides of an element. */
+    max-width: 800px;
+}
+
+
+@media screen and (min-width: 600px) {      /* there are different types of media querry i used one type of media querry */
+    .grid {
+        grid-template-columns: 1fr 1fr;  /*  Fr is a fractional unit and 1fr is for 1 part of the available space */
+    }
+}
+
+.grid.grid--vertical {                                  /* Grid and flexbox. The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. */
+    grid-template-columns: 1fr;
+}
+
+
+
+.story {
+    --pad: 20px;   /* to generate space around an element's content, inside of any defined borders*/
+    background: #fff;
+    display: var(--dis);
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+
+}
+
+
+
+.story.story--thumb {
+    display: flex;
+}
+
+
+.story__info {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: var(--pad);
+}
+
+
+.story__more {
+
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 8px 0;
+    white-space: nowrap;
+}
+
+
+.story__image {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+}
+
+
+.story__image.story__image--thumb {
+    position: static;
+}
+
+
+.story__media {
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.story__media.card__media--thumb {
+    flex: 0 1 200px;   /* a flex item will grow or shrink to fit the space available */
+    height: auto;
+    padding: 0;
+    position: static;
+}
+
+
+
+
+img {
+    display: block;
+    width: 20rem;
+    max-width: 100%;
+    margin: 5px;
+
+}
+
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.box-shadow {
+    box-shadow: 0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.drop-shadow {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+
+button{
+    background-color: orange;
+    border-radius: 15px;
+    border: var(--dis);
+    height: 50px;
+    width: 300px;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav{
+    display: flex;
+}
+.header_logo{
+    width: 100px;
+    height: 100px;
+
+}
+.nav_item{
+    text-decoration: none;
+    color: blue;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+.header_enter_btn{
+    background-color: springgreen;
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+.header_info{
+    display: flex;
+    align-items: center;
+}
+
+
+.nav_item_text{
+    padding-top: 15px;
+}
+
+.button{
+    background-color: yellow;
+    border-radius: 9px;
+    border: none;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
