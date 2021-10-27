@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is Lab2">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Мазумдер Шоувик">
+
+    <title>This is the first lab for Web-Programming</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header_info">
+        <div class="header_logo">
+            <img src="ITMO_University.png" alt="Logo">
+        </div>
+        <ul class="nav">
+            <li class="nav_item">
+                <div class="nav_item_text">My Research</div>
+            </li>
+            <li class="nav_item">
+                <div class="nav_item_text">My Job</div>
+            </li>
+            <li class="nav_item">
+                <div class="nav_item_text">Photo Gallery</div>
+            </li>
+        </ul>
+    </div>
+    <div class="button">
+
+        <a href="https://github.com/skroo7">  My GitHub </a>
+        <!--
+        <button class="header_enter_btn" onclick="window.location.href='https://github.com/skroo7';">
+            My GitHub
+        </button>
+        -->
+
+    </div>
+
+</header>
+
+<main>
+    <p class="section-title">My Featured Stories</p>
+    <p class="section-title">Мазумдер Шоувик M33101</p>
+
+    <div class="grid">
+        <a href="#" class="story">
+            <div class="story__media">
+                <img src="pic3.jpg" class="story__image" alt="story image 1">
+            </div>
+            <div class="story__info">
+                <h3 class="h2">Places that i have visited</h3>
+                <span class="story__more">Learn more</span>
+            </div>
+        </a>
+
+        <a href="#" class="story">
+            <div class="story__media">
+                <img src="pic4.jpg" class="story__image" alt="story image 1">
+            </div>
+            <div class="story__info">
+                <h3 class="h2">Places that i want to visit in Future.</h3>
+                <span class="story__more">Learn more</span>
+            </div>
+        </a>
+    </div>
+
+    <h2 class="section-title">Additonal Stories</h2>
+
+    <div class="grid grid--vertical">
+        <a href="#" class="story story--thumb">
+            <div class="story__media card__media--thumb">
+                <img src="AditionalStories1.jpeg" class="story__image story__image--thumb" alt="Success in life">
+            </div>
+            <div class="story__info story__info--thumb">
+                <h3 class="h2">Быть неуспешным в жизни - это нормально .</h3>
+
+                <span class="story__more story__more--thumb">My Success Stories</span>
+            </div>
+        </a>
+
+        <a href="#" class="story story--thumb">
+            <div class="story__media card__media--thumb">
+                <img src="AditionalStories.jpg" class="story__image story__image--thumb" alt="Failurs in life">
+            </div>
+            <div class="story__info story__info--thumb">
+                <h3 class="h2">Все в порядке, не надо антиуспеха..</h3>
+                <span class="story__more story__more--thumb">My Failure Stories</span>
+            </div>
+        </a>
+    </div>
+
+
+
+    <h1>My Timetable</h1>
+    <table class="myTimetable">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Practice 1</td>
+            <td>
+                <div class="subject">Maths</div>
+                <div class="room">245</div>
+            </td>
+            <td>
+                <div class="subject">Web_Programming</div>
+                <div class="room">120</div>
+            </td>
+            <td>
+                <div class="subject">ML</div>
+                <div class="room">245</div>
+            </td>
+            <td>
+                <div class="subject">OS</div>
+                <div class="room">420</div>
+            </td>
+            <td>
+                <div class="subject">UML</div>
+                <div class="room">331</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Practice 2</td>
+            <td>
+                <div class="subject">Math Analysis</div>
+                <div class="room">Lab1</div>
+            </td>
+            <td>
+                <div class="subject">History</div>
+                <div class="room">120b</div>
+            </td>
+            <td>
+                <div class="subject">Russian</div>
+                <div class="room">120e</div>
+            </td>
+            <td>
+                <div class="subject">P.E.</div>
+                <div class="room">A Gym</div>
+            </td>
+            <td>
+                <div class="subject">Maths</div>
+                <div class="room">420</div>
+            </td>
+        </tr>
+        <tr>
+            <TD colspan="6" class="break">Break</TD>
+        </tr>
+        <tr>
+            <td>Practice 3</td>
+            <td>
+                <div class="subject">I.T.</div>
+                <div class="room">ICT 1</div>
+            </td>
+            <td>
+                <div class="subject">Russian</div>
+                <div class="room">120d</div>
+            </td>
+            <td>
+                <div class="subject">OOP</div>
+                <div class="room">120</div>
+            </td>
+            <td>
+                <div class="subject">ML</div>
+                <div class="room">425</div>
+            </td>
+            <td>
+                <div class="subject">Web-Programming</div>
+                <div class="room">A24</div>
+            </td>
+        </tr>
+        <tr>
+            <TD colspan="6" class="lunch">Lunch</TD>
+        </tr>
+        <tr>
+            <td>Practice 4</td>
+            <td>
+                <div class="subject">History</div>
+                <div class="room">B104</div>
+            </td>
+            <td>
+                <div class="subject">Drama</div>
+                <div class="room">C17</div>
+            </td>
+            <td>
+                <div class="subject">Maths</div>
+                <div class="room">A120</div>
+            </td>
+            <td>
+                <div class="subject">Geography</div>
+                <div class="room">B101</div>
+            </td>
+            <td>
+                <div class="subject">P.E.</div>
+                <div class="room">A Gym</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Practice 5</td>
+            <td>
+                <div class="subject">Spanish</div>
+                <div class="room">C17</div>
+            </td>
+            <td>
+                <div class="subject">Science</div>
+                <div class="room">Lab1</div>
+            </td>
+            <td>
+                <div class="subject">English</div>
+                <div class="room">B21</div>
+            </td>
+            <td>
+                <div class="subject">Science</div>
+                <div class="room">Lab1</div>
+            </td>
+            <td>
+                <div class="subject">R.E.</div>
+                <div class="room">B18</div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+</main>
+
+<footer class="wrapper">
+
+        <div>
+            <h2>ITMO Box-shadow</h2>
+            <img class="box-shadow" src="p6.png" alt="ITMO Pic" />
+        </div>
+
+        <div>
+            <h2>ITMO Drop-shadow</h2>
+            <img src="p6.png" alt="ITMO Pic" />
+        </div>
+</footer>
+
+
+</body>
+</html>
