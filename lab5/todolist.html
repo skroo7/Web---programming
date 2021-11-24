@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="lab3" content="lab3 again, initial-scale=1.0">
+
+    <title>My Lab -3</title>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="todo.css">
+
+
+    <script src="code.js"></script>
+    <script src="todo.js"></script>
+
+
+</head>
+<body>
+
+<header style="width: 100%; background-color: white; position: sticky; top: 0">
+    <nav class="main-header">
+        <h1 class="name"><a href="https://www.facebook.com/viictoroo7/">Showvik Mazumder</a></h1>
+        <ul class="main-nav">
+            <li><a onclick="highlite(this);" href="index.html">HOME</a></li>
+            <li><a onclick="highlite(this);" href="page2.html">page2</a></li>
+            <li><a onclick="highlite(this);" href="#">github</a></li>
+            <li><a id="default" class="highlite" onclick="highlite(this);" href="todolist.html">todolist</a></li>
+            <li><a onclick="highlite(this);" href="a.html">Link5</a></li>
+
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+        var current = document.getElementById('default');
+
+        function highlite(el)
+        {
+            if (current != null)
+            {
+                current.className = "";
+            }
+            el.className = "highlite";
+            current = el;
+        }
+    </script>
+
+</header><!--/.main-header-->
+
+
+<div class="wrapper">
+    <div class="date"></div>
+    <h1 class="heading">TODO LIST</h1>
+    <div class="todo">
+        <div class="addToDo">
+            <form id="addToDoForm" class="addToDoForm">
+                <input type="text" name="name" placeholder="Add your Todo" />
+                <input type="submit" name="submit" value="Add" />
+            </form>
+            <div class="list"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="main-footer">
+    <span>&copy;2021 Showvik Mazumder Group :M33101.</span>
+    <h3 style="font-weight: bold; font-size: medium; color: black">Page load time in JavaScript</h3>
+    <div>
+        <span id="loadtime"></span>
+
+    </div>
+</footer>
+
+</body>
+</html>

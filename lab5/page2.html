@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+<header style="width: 100%; background-color: white; position: sticky; top: 0">
+    <nav class="main-header">
+        <h1 class="name"><a href="https://www.facebook.com/viictoroo7/">Showvik Mazumder</a></h1>
+        <ul class="main-nav">
+            <!--    <li><a href="#">Reserch</a></li>
+                <li><a href="page2.html">page2</a></li>
+                <li><a href="#">github</a></li>
+                <li><a href="test.html">ToDoList</a></li>
+                -->
+            <li><a onclick="highlite(this);" href="index.html">HOME</a></li>
+            <li><a id="default" class="highlite" onclick="highlite(this);" href="#">Page2</a></li>
+            <li><a onclick="highlite(this);" href="#">github</a></li>
+            <li><a onclick="highlite(this);" href="todolist.html">todolist</a></li>
+            <li><a onclick="highlite(this);" href="#">Link5</a></li>
+
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+        var current = document.getElementById('default');
+
+        function highlite(el)
+        {
+            if (current != null)
+            {
+                current.className = "";
+            }
+            el.className = "highlite";
+            current = el;
+        }
+    </script>
+
+</header><!--/.main-header-->
+
+
+
+<div style="color: black" align="center" >
+    <h1>My main title</h1>
+
+    <p>This is a single paragraph</p>
+    <p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+
+
+    <p>At Mozilla, we’re a global community of</p>
+
+    <ul>
+        <li>technologists</li>
+        <li>thinkers</li>
+        <li>builders</li>
+    </ul>
+
+    <p>working together ... </p>
+
+</div>
+
+<script>
+    var before_loadtime = new Date().getTime();
+    window.onload = Pageloadtime;
+    function Pageloadtime() {
+        var aftr_loadtime = new Date().getTime();
+        // Time calculating in seconds
+        pgloadtime = (aftr_loadtime - before_loadtime) / 1000
+        document.getElementById("loadtime").innerHTML = "Pgae load time is <b>" + pgloadtime + "</b>Seconds";
+    }
+
+</script>
+
+
+
+<footer class="main-footer">
+    <span>&copy;2021 Showvik Mazumder Group :M33101.</span>
+    <h3 style="font-weight: bold; font-size: medium; color: black">Page load time in JavaScript</h3>
+    <div>
+        <span id="loadtime"></span>
+
+    </div>
+</footer>
+
+
+</body>
+</html>
