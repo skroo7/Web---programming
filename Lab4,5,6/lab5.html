@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab5 List</title>
+    <link rel="stylesheet" href="lab5.css">
+    <link rel="stylesheet" href="flexbox.css">
+
+    <script src="code.js"></script>
+
+</head>
+
+<body>
+
+<header style="width: 100%; background-color: white; position: sticky; top: 0">
+    <nav class="main-header">
+        <h1 class="name"><a href="https://www.facebook.com/viictoroo7/">Showvik Mazumder</a></h1>
+        <ul class="main-nav">
+            <li><a class="link_element" href="index.html">Home</a></li>
+            <li><a class="link_element" href="page2.html">page2</a></li>
+            <li><a class="link_element" href="https://github.com/skroo7/Web---programming/deployments/activity_log?environment=github-pages">github</a></li>
+            <li><a class="link_element" href="lab5.html">Lab5</a></li>
+            <li><a class="link_element" href="lab6.html">Lab6</a></li>
+
+        </ul>
+    </nav>
+
+</header>
+
+
+
+<section class="todoapp">
+    <header class="header">
+        <h1>todo list</h1>
+        <input id="newTodo" class="new-todo" placeholder="What needs to be done?">
+    </header>
+    <section id="main">
+        <input id="toggleInputAll" class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todoListView" class="todo-list"></ul>
+    </section>
+    <div class="footer">
+        <span class="todo-count"><strong id="todoCount">0</strong> item left</span>
+        <ul class="filters">
+            <li>
+                <a class="selected" id="allWorks" onclick="changeClass(this)" href="#/">All</a>
+            </li>
+            <li>
+                <a href="#active" id="activedItems" onclick="changeClass(this)">Active</a>
+            </li>
+            <li>
+                <a href="#completed" id="completedTodos" onclick="changeClass(this)">Completed</a>
+            </li>
+        </ul>
+        <button class="clear-completed" id="btnClear">Clear completed</button>
+
+    </div>
+</section>
+
+
+<footer class="main-footer">
+    <span>&copy;2021 Showvik Mazumder Group :M33101.</span>
+    <h3 style="font-weight: bold; font-size: medium; color: black">Page load time in JavaScript</h3>
+    <div>
+        <span id="loadtime"></span>
+
+    </div>
+</footer>
+
+
+<script src="lab5.js"></script>
+</body>
+
+</html>
