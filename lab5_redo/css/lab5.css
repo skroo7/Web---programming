@@ -18,6 +18,7 @@ body{
     width: 380px;
     height:200px;
     background-size: 100% 200%;
+    background-image: url("../../media/examples/lizard.png");
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     position: relative;
@@ -137,8 +138,15 @@ body{
 
 
 
+.main-footer {
+    background: #d9e4ea;
+    padding: 2em 0;
+    margin-top: 30px;
+}
 
-
+.main-footer {
+    text-align: center;
+}
 
 
 
