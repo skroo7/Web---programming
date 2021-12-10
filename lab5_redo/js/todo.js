@@ -32,7 +32,7 @@ if(data){
 // load items to the user's interface
 function loadList(array){
     array.forEach(function(item){
-        addToDo(item.name, item.id, item.done, item.trash);
+        addToDo(item.name, item.id, item.done);
     });
 }
 
@@ -50,9 +50,9 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 // add to do function
 
-function addToDo(toDo, id, done, trash){
+function addToDo(toDo, id, done){
     
-    if(trash){ return; }
+
     
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done ? LINE_THROUGH : "";
@@ -89,13 +89,12 @@ document.addEventListener("keyup",function(even){
         
         // if the input isn't empty
         if(toDo){
-            addToDo(toDo, id, false, false);
+            addToDo(toDo, id, false);
             
             LIST.push({
                 name : toDo,
                 id : id,
                 done : false,
-                trash : false
             });
             
             // add item to localstorage ( this code must be added where the LIST array is updated)
@@ -121,7 +120,7 @@ function completeToDo(element){
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
     
-    LIST[element.id].trash = true;
+    LIST.splice(element.id, 1);
 }
 
 // target the items created dynamically
