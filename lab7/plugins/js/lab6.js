@@ -1,28 +1,37 @@
-var btn = document.getElementById("btn").addEventListener("click",getpost);
-var con = 0;
-var div = document.getElementById("cardDiv")
+const postSection = document.querySelector('#blocks');
+const postTemplate = document.querySelector('#post-template');
 
-function getpost() {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-        .then((res)=>{
-            return res.json();
-        })
-        .then((post)=>{
-            for (let index = 0 ; index < 1; index++) {
-                div.innerHTML+=`
-                <div class="card col-3 m-1 mx-auto">
-                <img class="card-img-top" src="${post[con].thumbnailUrl}">
-                <div class="card-body">
-                <h5 class="card-title">${post[con].id}</h5>
-                <p class="card-text">${post[con].title}</p>
-                </div>
-                </div>
-                `
-                con = con + 1;
-            }
-        })
-        .catch((error)=>{
-            console.log(error);
+getData()
+    .catch(err => console.error(err));
 
-        })
+async function getData() {
+    const postStream = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const posts = await postStream.json();
+    let i = 0;
+
+
+    posts.forEach(post => {
+        i++;
+        if(i < 10) {
+            const title = post.title;
+            const body = post.body;
+
+            fetch('https://unsplash.it/300/200')
+                .then(res => res.blob())
+                .then(blob => {
+                    const newPost = document.importNode(postTemplate.content, true);
+                    const postTitle = newPost.querySelector('.post__title');
+                    const postBody = newPost.querySelector('.post__body');
+                    const postImg = newPost.querySelector('.post__img');
+
+                    postImg.src = URL.createObjectURL(blob);
+                    postTitle.innerText = title;
+                    postBody.innerText = body;
+                    postSection.appendChild(newPost);
+                })
+                .catch(err => console.error(err));
+        }
+    })
 }
+
+

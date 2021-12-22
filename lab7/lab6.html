@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LAB_6</title>
-    <script src="js/code.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/flexbox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="plugins/css/lab6.css">
+    <link rel="stylesheet" href="plugins/css/main.css">
+    <link rel="stylesheet" href="plugins/css/flexbox.css">
+    <script src="plugins/js/code.js"></script>
+    <title>JavaScript Fetch Demo</title>
 </head>
-<body style="background-color: cyan">
-<header style="width: 100%; background-color: white; position: relative; top: 0">
+<body>
+
+<header style="width: 100%; background-color: white; position: sticky; top: 0">
     <nav class="main-header">
         <h1 class="name"><a href="https://www.facebook.com/viictoroo7/">Showvik Mazumder</a></h1>
         <ul class="main-nav">
@@ -18,26 +21,33 @@
             <li><a class="link_element" href="https://github.com/skroo7/Web---programming/deployments/activity_log?environment=github-pages">github</a></li>
             <li><a class="link_element" href="lab5.html">Lab5</a></li>
             <li><a class="link_element" href="lab6.html">Lab6</a></li>
-
+            <li><a class="link_element" href="lab7.html">Lab7</a></li>
         </ul>
     </nav>
 
 </header>
 
 
-<div class="container">
-    <div class="row">
-        <button id="btn" type="button" class="mt-3 mx-auto btn btn-primary">
-            getpost
-        </button>
 
-    </div>
-    <div class="row" id="cardDiv">
 
-    </div>
+<div class="loader_bg">
+    <div class="loader"></div>
 </div>
 
-<script src="js/lab6.js"></script>
+<h1><input id="bt" type="button"  value="Reload Page"  onClick="document.location.reload(true)"></h1>
+<h1> Lab - 6 </h1>
+<section id="blocks"></section>
+
+<template id="post-template">
+    <div class="block">
+        <img src="" alt="" class="post__img">
+        <h4 class="post__title"></h4>
+        <p class="post__body"></p>
+    </div>
+</template>
+<script src="plugins/js/lab6.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="plugins/js/loader.js"></script>
 
 <footer class="main-footer">
     <span>&copy;2021 Showvik Mazumder Group :M33101.</span>
@@ -47,6 +57,7 @@
 
     </div>
 </footer>
+
 
 </body>
 </html>
